@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_home"
+    app:startDestination="@id/home_navigation">
+
+    <fragment
+        android:id="@+id/home_navigation"
+        android:name="com.example.sqlite_tabllar.Home_navigation"
+        android:label="fragment_home_navigation"
+        tools:layout="@layout/fragment_home_navigation" >
+        <action
+            android:id="@+id/action_home_navigation_to_employee_fragment"
+            app:destination="@id/employee_fragment" />
+        <action
+            android:id="@+id/action_home_navigation_to_orders_fragment"
+            app:destination="@id/orders_fragment" />
+        <action
+            android:id="@+id/action_home_navigation_to_custumor_fragment"
+            app:destination="@id/custumor_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/employee_fragment"
+        android:name="com.example.sqlite_tabllar.employee_fragment"
+        android:label="fragment_employee_fragment"
+        tools:layout="@layout/fragment_employee_fragment" />
+    <fragment
+        android:id="@+id/orders_fragment"
+        android:name="com.example.sqlite_tabllar.orders_fragment"
+        android:label="fragment_orders_fragment"
+        tools:layout="@layout/fragment_orders_fragment" />
+    <fragment
+        android:id="@+id/custumor_fragment"
+        android:name="com.example.sqlite_tabllar.custumor_fragment"
+        android:label="fragment_custumor_fragment"
+        tools:layout="@layout/fragment_custumor_fragment" />
+</navigation>
